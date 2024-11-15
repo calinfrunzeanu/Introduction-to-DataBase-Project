@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Săli</title>
+</head>
+<body>
+    <h1>Lista de Săli</h1>
+    <table border="1">
+        <tr>
+            <th>SalaID</th>
+            <th>Nr. Sala</th>
+            <th>Etaj</th>
+        </tr>
+        {% for sala in sali %}
+        <tr>
+            <td>{{ sala.SalaID }}</td>
+            <td>{{ sala.NrSala }}</td>
+            <td>{{ sala.Etaj }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autori</title>
+</head>
+<body>
+    <h1>Lista de Autori</h1>
+    <table border="1">
+        <tr>
+            <th>AutorID</th>
+            <th>Nume</th>
+            <th>Naționalitate</th>
+        </tr>
+        {% for autor in autori %}
+        <tr>
+            <td>{{ autor.AutorID }}</td>
+            <td>{{ autor.Nume }}</td>
+            <td>{{ autor.Nationalitate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>

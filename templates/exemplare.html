@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplare</title>
+</head>
+<body>
+    <h1>Lista de Exemplare</h1>
+    <table border="1">
+        <tr>
+            <th>COTA</th>
+            <th>Condiție</th>
+            <th>Defecte</th>
+            <th>ISBN</th>
+            <th>Sala ID</th>
+        </tr>
+        {% for exemplar in exemplare %}
+        <tr>
+            <td>{{ exemplar.COTA }}</td>
+            <td>{{ exemplar.Conditie }}</td>
+            <td>{{ exemplar.Defecte }}</td>
+            <td>{{ exemplar.ISBN }}</td>
+            <td>{{ exemplar.SalaID }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>

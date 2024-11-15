@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genuri</title>
+</head>
+<body>
+    <h1>Lista de Genuri</h1>
+    <table border="1">
+        <tr>
+            <th>GenID</th>
+            <th>Nume Gen</th>
+            <th>Varsta Minimă</th>
+        </tr>
+        {% for gen in genuri %}
+        <tr>
+            <td>{{ gen.GenID }}</td>
+            <td>{{ gen.NumeGen }}</td>
+            <td>{{ gen.VarstaMin }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>

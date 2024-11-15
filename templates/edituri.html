@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edituri</title>
+</head>
+<body>
+    <h1>Lista de Edituri</h1>
+    <table border="1">
+        <tr>
+            <th>EdituraID</th>
+            <th>Nume Editura</th>
+            <th>Adresa Sediu</th>
+            <th>Email</th>
+            <th>Nr. Telefon</th>
+        </tr>
+        {% for editura in edituri %}
+        <tr>
+            <td>{{ editura.EdituraID }}</td>
+            <td>{{ editura.NumeEditura }}</td>
+            <td>{{ editura.AdresaSediu }}</td>
+            <td>{{ editura.Email }}</td>
+            <td>{{ editura.NrTelefon }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>

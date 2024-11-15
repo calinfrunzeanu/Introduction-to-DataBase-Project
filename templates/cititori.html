@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cititori</title>
+</head>
+<body>
+    <h1>Lista de Cititori</h1>
+    <table border="1">
+        <tr>
+            <th>Nr. Permis</th>
+            <th>Data Naștere</th>
+            <th>Nume</th>
+        </tr>
+        {% for cititor in cititori %}
+        <tr>
+            <td>{{ cititor.NrPermis }}</td>
+            <td>{{ cititor.DataNastere }}</td>
+            <td>{{ cititor.Nume }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>

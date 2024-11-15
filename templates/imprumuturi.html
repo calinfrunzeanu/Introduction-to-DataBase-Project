@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Împrumuturi</title>
+</head>
+<body>
+    <h1>Lista de Împrumuturi</h1>
+    <table border="1">
+        <tr>
+            <th>Data Împrumut</th>
+            <th>Data Returnare</th>
+            <th>Nr. Permis</th>
+            <th>COTA</th>
+            <th>Împrumut ID</th>
+        </tr>
+        {% for imprumut in imprumuturi %}
+        <tr>
+            <td>{{ imprumut.DataImprumut }}</td>
+            <td>{{ imprumut.DataReturnare }}</td>
+            <td>{{ imprumut.NrPermis }}</td>
+            <td>{{ imprumut.COTA }}</td>
+            <td>{{ imprumut.ImprumutID }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>

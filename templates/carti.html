@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cărți</title>
+</head>
+<body>
+    <h1>Lista de Cărți</h1>
+    <table border="1">
+        <tr>
+            <th>ISBN</th>
+            <th>Titlu</th>
+            <th>Copertă</th>
+            <th>Nr. Pagini</th>
+            <th>Limbă</th>
+            <th>Editura ID</th>
+        </tr>
+        {% for carte in carti %}
+        <tr>
+            <td>{{ carte.ISBN }}</td>
+            <td>{{ carte.Titlu }}</td>
+            <td>{{ carte.Coperta }}</td>
+            <td>{{ carte.NrPagini }}</td>
+            <td>{{ carte.Limba }}</td>
+            <td>{{ carte.EdituraID }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Înapoi la Acasă</a>
+</body>
+</html>
